@@ -18,5 +18,17 @@ test("menu should be in the doc", () => {
 });
 
 test("menu should be a menu item", () => {
-  expect(menu.outerHTML).toContain('<menu id="menu" data-testid="menu">');
+  expect(menu.outerHTML).toContain('<nav id="menu" data-testid="menu">');
+  expect(menu.outerHTML).toContain("</nav>");
+});
+
+test("menu should have an ul as first child", () => {
+  if (menu !== null && menu.firstElementChild !== null) {
+    expect(menu.firstElementChild.outerHTML).toContain("<ul");
+  }
+});
+test("menu should have a button as last child", () => {
+  if (menu !== null && menu.lastElementChild !== null) {
+    expect(menu.lastElementChild.outerHTML).toContain("<button");
+  }
 });
