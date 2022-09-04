@@ -1,5 +1,6 @@
 import React from "react";
 import "./Menu.css";
+import MenuItem from "./MenuItem/MenuItem";
 
 const Menu = () => {
   return (
@@ -10,8 +11,9 @@ const Menu = () => {
           id="logo"
           alt="Spotify logo"
         />
-        <li className="items">Home</li>
-        <li className="items">CV</li>
+
+        <MenuItem name="Home" logo="home.png" />
+        <MenuItem name="CV" logo="cv.png" />
       </ul>
     </nav>
   );
