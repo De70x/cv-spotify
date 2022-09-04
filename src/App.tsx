@@ -1,13 +1,13 @@
 import React from "react";
-import { Menu } from "./Menu/Menu";
+import Menu from "./Menu/Menu";
 
-function App() {
+const App = () => {
   return (
     <div>
       <h1>CV Spotify</h1>
       <Menu />
     </div>
   );
-}
+};
 
 export default App;
