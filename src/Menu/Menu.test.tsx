@@ -27,8 +27,3 @@ test("menu should have an ul as first child", () => {
     expect(menu.firstElementChild.outerHTML).toContain("<ul");
   }
 });
-test("menu should have a button as last child", () => {
-  if (menu !== null && menu.lastElementChild !== null) {
-    expect(menu.lastElementChild.outerHTML).toContain("<button");
-  }
-});

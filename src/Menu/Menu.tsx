@@ -13,7 +13,6 @@ const Menu = () => {
         <li className="items">Home</li>
         <li className="items">CV</li>
       </ul>
-      <button className="btn">BTN</button>
     </nav>
   );
 };
