@@ -1,14 +1,9 @@
 nav {
   position: fixed;
-  top: 0;
-  width: 100%;
-  height: 50px;
+  left: 0;
+  width: 300px;
+  height: 100%;
   background: black;
-}
-
-ul {
-  padding: unset;
-  margin: unset;
 }
 
 .list {
@@ -16,17 +11,21 @@ ul {
   background: black;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   position: relative;
 }
 
 .items {
-  margin-right: 20px;
   font-size: 20px;
-  text-transform: uppercase;
   color: white;
   cursor: pointer;
+}
+
+#logo {
+  filter: brightness(0) invert(1);
+  width: 60%;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .btn {
