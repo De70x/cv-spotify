@@ -17,7 +17,7 @@ test("menu should be in the doc", () => {
   expect(menu).toBeInTheDocument();
 });
 
-test("menu should be a menu item", () => {
+test("menu should be a nav item", () => {
   expect(menu.outerHTML).toContain('<nav id="menu" data-testid="menu">');
   expect(menu.outerHTML).toContain("</nav>");
 });
