@@ -24,3 +24,17 @@ code {
 :root {
   --green: #1fdf64;
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from(var(--green)),
+        color-stop(20%, #121212),
+        to(#121212)
+      )
+      fixed;
+  }
+}
