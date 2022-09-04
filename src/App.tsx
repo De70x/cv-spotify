@@ -1,8 +1,5 @@
 import React from "react";
-
-export function Menu() {
-  return null;
-}
+import { Menu } from "./Menu/Menu";
 
 function App() {
   return (
