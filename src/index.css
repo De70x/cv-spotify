@@ -1,3 +1,16 @@
+:root {
+  /*  COLORS */
+  --green: #1fdf64;
+  --background: #181818;
+  --unselected: #888;
+  --selected: #fff;
+
+  /* FILTERS */
+  --filter-white: brightness(0) invert(1);
+  /* if we just do brightness 0.5, black images wont be gray */
+  --filter-gray: brightness(0) invert(1) brightness(0.5);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,8 +23,8 @@ body {
       left top,
       left bottom,
       from(var(--green)),
-      color-stop(33%, var(--bacground)),
-      to(var(--bacground))
+      color-stop(33%, var(--background)),
+      to(var(--background))
     )
     fixed;
 }
@@ -21,11 +34,6 @@ code {
     monospace;
 }
 
-:root {
-  --green: #1fdf64;
-  --bacground: #181818;
-}
-
 @media screen and (max-width: 500px) {
   body {
     background: -webkit-gradient(
@@ -33,8 +41,8 @@ code {
         left top,
         right bottom,
         from(var(--green)),
-        color-stop(20%, var(--bacground)),
-        to(var(--bacground))
+        color-stop(20%, var(--background)),
+        to(var(--background))
       )
       fixed;
   }
