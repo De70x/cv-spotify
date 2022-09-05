@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import MenuItem from "./MenuItem";
+import { TestId } from "../../Const/TestId";
 
 let menuItem: HTMLElement;
 let logo: HTMLImageElement;
@@ -10,7 +11,7 @@ process.env.PUBLIC_URL = "http://localhost";
 
 test("menuItem should be in the doc", () => {
   render(<MenuItem />);
-  menuItem = screen.getByTestId("menuItem");
+  menuItem = screen.getByTestId(TestId.MENU_ITEM);
   expect(menuItem).toBeInTheDocument();
 });
 

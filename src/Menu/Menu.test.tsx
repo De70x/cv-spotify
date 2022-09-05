@@ -1,12 +1,13 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Menu from "./Menu";
+import { TestId } from "../Const/TestId";
 
 let menu: HTMLElement;
 
 function initMenu() {
   render(<Menu />);
-  menu = screen.getByTestId("menu");
+  menu = screen.getByTestId(TestId.MENU);
 }
 
 beforeAll(() => {
@@ -18,7 +19,7 @@ test("menu should be in the doc", () => {
 });
 
 test("menu should be a nav item", () => {
-  expect(menu.outerHTML).toContain('<nav id="menu" data-testid="menu">');
+  expect(menu.outerHTML).toContain('<nav id="menu"');
   expect(menu.outerHTML).toContain("</nav>");
 });
 
