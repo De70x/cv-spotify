@@ -6,6 +6,8 @@ let menuItem: HTMLElement;
 let logo: HTMLImageElement;
 let name: HTMLElement;
 
+process.env.PUBLIC_URL = "http://localhost";
+
 test("menuItem should be in the doc", () => {
   render(<MenuItem />);
   menuItem = screen.getByTestId("menuItem");
@@ -25,5 +27,6 @@ test("MenuItems should have props correctly set", () => {
   logo = screen.getByTestId("logo");
   name = screen.getByTestId("name");
   expect(logo.alt).toEqual("logo.png");
+  expect(logo.src).toEqual(process.env.PUBLIC_URL + "/logo.png");
   expect(name.innerHTML).toEqual("name");
 });
