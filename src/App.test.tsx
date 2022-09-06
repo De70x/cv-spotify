@@ -23,3 +23,5 @@ test("default app should display at least the menu and the cardContainer", () =>
   expect(menu).toBeInTheDocument();
   expect(cardContainer).toBeInTheDocument();
 });
+
+test("App should display Home first");
