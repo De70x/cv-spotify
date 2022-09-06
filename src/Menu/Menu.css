@@ -1,21 +1,11 @@
-nav {
-  position: fixed;
-  left: 0;
-  width: 300px;
-  height: 100%;
-  background: black;
+#menu {
+  display: grid;
+  background: var(--bg-darker);
+  align-content: start;
+  padding: 20px;
+  grid-template-areas: "logo" "home" "cv";
 }
-
-.list {
-  list-style-type: none;
-  background: black;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-#logo {
+#logo-spotify {
   filter: var(--filter-white);
   width: 60%;
   margin-bottom: 30px;
@@ -26,17 +16,15 @@ nav {
   filter: var(--filter-white);
 }
 
-.items {
+.menu-items {
   font-size: 20px;
   color: var(--unselected);
   cursor: pointer;
-  margin-top: 20px;
   display: flex;
-  width: 100%;
   height: 50px;
 }
 
-.items:hover {
+.menu-items:hover {
   color: var(--selected);
 }
 
@@ -48,42 +36,30 @@ nav {
 }
 
 @media screen and (max-width: 500px) {
-  nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background: var(--bg-darker);
-  }
-
-  ul {
+  #menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: unset;
     margin: unset;
+    grid-template-areas: "home cv";
+    justify-content: stretch;
+    align-content: stretch;
+    place-items: center center;
   }
 
-  #logo {
+  .menu-items {
+    align-items: center;
+  }
+
+  #Home {
+    grid-area: home;
+  }
+
+  #CV {
+    grid-area: cv;
+  }
+
+  #logo-spotify {
     display: none;
-  }
-
-  .list {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .logo_menu {
-    margin: unset;
-  }
-
-  .items {
-    margin-top: 2%;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    font-size: 15px;
-  }
-
-  .btn {
-    display: block;
   }
 }

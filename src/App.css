@@ -1,0 +1,27 @@
+.gridContainer {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 300px auto;
+  grid-gap: 20px;
+  grid-template-areas: "menu content";
+}
+
+@media screen and (max-width: 500px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 50px;
+    grid-gap: unset;
+    grid-template-areas:
+      "content"
+      "menu";
+  }
+}
+
+#menu {
+  grid-area: menu;
+}
+
+#cardContainer {
+  grid-area: content;
+}

@@ -23,8 +23,8 @@ test("menu should be a nav item", () => {
   expect(menu.outerHTML).toContain("</nav>");
 });
 
-test("menu should have an ul as first child", () => {
-  if (menu !== null && menu.firstElementChild !== null) {
-    expect(menu.firstElementChild.outerHTML).toContain("<ul");
+test("menu should have some entries", () => {
+  if (menu === null || menu.firstElementChild === null) {
+    throw new Error("No menu entries");
   }
 });

@@ -1,10 +1,11 @@
 import React from "react";
 import Menu from "./Menu/Menu";
 import CardContainer from "./Main/CardContainer";
+import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <div className="gridContainer">
       <Menu />
       <CardContainer />
     </div>
