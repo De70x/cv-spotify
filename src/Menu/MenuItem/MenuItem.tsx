@@ -1,4 +1,5 @@
 import React from "react";
+import { TestId } from "../../Const/TestId";
 
 export interface MenuItemProps {
   name?: string;
@@ -8,14 +9,14 @@ export interface MenuItemProps {
 const MenuItem: React.FC<MenuItemProps> = (props) => {
   const { name, logo } = props;
   return (
-    <div id={name} className="menu-items" data-testid="menuItem">
+    <div id={name} className="menu-items" data-testid={TestId.MENU_ITEM + name}>
       <img
         src={process.env.PUBLIC_URL + "/" + logo}
         alt={logo}
         className="logo_menu"
         data-testid="logo"
       />
-      <span data-testid="name">{name}</span>
+      <span data-testid={TestId.NAME + name}>{name}</span>
     </div>
   );
 };
