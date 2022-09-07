@@ -3,6 +3,7 @@
   --green: #1fdf64;
   --background: #181818;
   --bg-darker: #000;
+  --white: #fff;
 
   /* FILTERS */
   --filter-white: brightness(0) invert(1);
@@ -26,6 +27,7 @@ body {
       to(var(--background))
     )
     fixed;
+  color: var(--white);
 }
 
 code {
