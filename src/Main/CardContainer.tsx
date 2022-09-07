@@ -1,17 +1,20 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 import "./CardContainer.css";
+import { MenuEntry } from "../Const/MenuEntry";
 
-const CardContainer = () => {
+interface CCProps {
+  page?: MenuEntry;
+}
+
+const CardContainer = (props: CCProps) => {
+  let { page } = props;
+  if (!page) {
+    page = MenuEntry.HOME;
+  }
   return (
     <div data-testid="cardContainer" id="cardContainer">
-      <Card>
-        <CardContent>
-          <Typography>Card for tests</Typography>
-        </CardContent>
-      </Card>
+      {MenuEntry.HOME === page && <div data-testid={"home"}></div>}
+      {MenuEntry.CV === page && <div data-testid={"cv"}></div>}
     </div>
   );
 };
