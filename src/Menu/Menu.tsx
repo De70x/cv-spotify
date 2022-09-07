@@ -5,12 +5,12 @@ import { MenuEntry } from "../Const/MenuEntry";
 import { TestId } from "../Const/TestId";
 
 interface MenuProps {
-  onChange?: (page: MenuEntry) => void;
+  onClick: any;
   page?: MenuEntry;
 }
 
 const Menu = (props: MenuProps) => {
-  const { page, onChange } = props;
+  const { page, onClick } = props;
   return (
     <nav id="menu" data-testid={TestId.MENU}>
       <div>
@@ -24,8 +24,14 @@ const Menu = (props: MenuProps) => {
         name="Home"
         logo="home.png"
         selected={page === MenuEntry.HOME}
+        onClick={onClick}
       />
-      <MenuItem name="CV" logo="cv.png" selected={page === MenuEntry.CV} />
+      <MenuItem
+        name="CV"
+        logo="cv.png"
+        selected={page === MenuEntry.CV}
+        onClick={onClick}
+      />
     </nav>
   );
 };

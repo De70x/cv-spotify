@@ -6,12 +6,12 @@ import { MenuEntry } from "./Const/MenuEntry";
 
 const App = () => {
   const [page, setPage] = useState(MenuEntry.HOME);
-  function handleChange(newValue: MenuEntry) {
+  function handleClick(newValue: MenuEntry) {
     setPage(newValue);
   }
   return (
     <div className="gridContainer">
-      <Menu page={page} onChange={handleChange} />
+      <Menu page={page} onClick={handleClick} />
       <CardContainer page={page} />
     </div>
   );

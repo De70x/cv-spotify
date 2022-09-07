@@ -8,7 +8,7 @@ import { TestId } from "./Const/TestId";
 // some tests just to be sure each component exists
 describe("Testing component", () => {
   it("Should be able to render Menu component", () => {
-    render(<Menu />);
+    render(<Menu onClick={() => {}} />);
   });
   it("Should be able to render CardContainer component", () => {
     render(<CardContainer />);

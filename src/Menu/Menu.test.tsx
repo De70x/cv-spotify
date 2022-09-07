@@ -7,17 +7,17 @@ import App from "../App";
 
 describe("Menu tests", () => {
   it("should be in the doc", () => {
-    render(<Menu />);
+    render(<Menu onClick={() => {}} />);
     const menu = screen.getByTestId(TestId.MENU);
     expect(menu).toBeInTheDocument();
   });
   it("should be a nav item", () => {
-    render(<Menu />);
+    render(<Menu onClick={() => {}} />);
     const menu = screen.getByTestId(TestId.MENU);
     expect(menu.outerHTML).toContain("</nav>");
   });
   it("should have some entries", () => {
-    render(<Menu />);
+    render(<Menu onClick={() => {}} />);
     const menu = screen.getByTestId(TestId.MENU);
     if (menu === null || menu.firstElementChild === null) {
       throw new Error("No menu entries");
@@ -25,7 +25,7 @@ describe("Menu tests", () => {
   });
 
   it("should know the current page", () => {
-    render(<Menu page={MenuEntry.CV} />);
+    render(<Menu page={MenuEntry.CV} onClick={() => {}} />);
   });
   it("Home should be selected by default", () => {
     render(<App />);
