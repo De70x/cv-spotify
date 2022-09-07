@@ -42,7 +42,7 @@ code {
         left top,
         right bottom,
         from(var(--green)),
-        color-stop(20%, var(--background)),
+        color-stop(25%, var(--background)),
         to(var(--background))
       )
       fixed;
