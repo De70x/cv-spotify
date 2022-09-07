@@ -4,12 +4,19 @@ import { TestId } from "../../Const/TestId";
 export interface MenuItemProps {
   name?: string;
   logo?: string;
+  selected?: boolean;
 }
 
-const MenuItem: React.FC<MenuItemProps> = (props) => {
-  const { name, logo } = props;
+const MenuItem = (props: MenuItemProps) => {
+  const { name, logo, selected } = props;
+
+  const classNameSelected = selected ? "selected" : "";
   return (
-    <div id={name} className="menu-items" data-testid={TestId.MENU_ITEM + name}>
+    <div
+      id={name}
+      className={classNameSelected + " menu-items"}
+      data-testid={TestId.MENU_ITEM + name}
+    >
       <img
         src={process.env.PUBLIC_URL + "/" + logo}
         alt={logo}
