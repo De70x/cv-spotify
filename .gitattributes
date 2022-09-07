@@ -1,1 +1,4 @@
-*.ts *.tsx *.css *.html eol=lf
+*.ts eol=lf
+*.tsx eol=lf
+*.css eol=lf
+*.html eol=lf
