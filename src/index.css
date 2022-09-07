@@ -3,8 +3,6 @@
   --green: #1fdf64;
   --background: #181818;
   --bg-darker: #000;
-  --unselected: #888;
-  --selected: #fff;
 
   /* FILTERS */
   --filter-white: brightness(0) invert(1);
