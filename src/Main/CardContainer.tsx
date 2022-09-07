@@ -13,8 +13,8 @@ const CardContainer = (props: CCProps) => {
   }
   return (
     <div data-testid="cardContainer" id="cardContainer">
-      {MenuEntry.HOME === page && <div data-testid={"home"}></div>}
-      {MenuEntry.CV === page && <div data-testid={"cv"}></div>}
+      {MenuEntry.HOME === page && <div data-testid={"home"}>HOME</div>}
+      {MenuEntry.CV === page && <div data-testid={"cv"}>CV</div>}
     </div>
   );
 };
