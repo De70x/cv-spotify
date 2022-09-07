@@ -28,5 +28,3 @@ test("menu should have some entries", () => {
     throw new Error("No menu entries");
   }
 });
-
-test("menu should navigate on click");
