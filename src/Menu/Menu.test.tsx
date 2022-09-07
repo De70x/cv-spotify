@@ -3,8 +3,9 @@ import { render, screen } from "@testing-library/react";
 import Menu from "./Menu";
 import { TestId } from "../Const/TestId";
 import { MenuEntry } from "../Const/MenuEntry";
+import App from "../App";
 
-describe("Meu tests", () => {
+describe("Menu tests", () => {
   it("should be in the doc", () => {
     render(<Menu />);
     const menu = screen.getByTestId(TestId.MENU);
@@ -27,8 +28,8 @@ describe("Meu tests", () => {
     render(<Menu page={MenuEntry.CV} />);
   });
   it("Home should be selected by default", () => {
-    render(<Menu />);
+    render(<App />);
     const menuItem = screen.getByTestId(TestId.MENU_ITEM + "Home");
-    console.log(menuItem.getAttributeNames());
+    expect(menuItem).toHaveClass("selected");
   });
 });
