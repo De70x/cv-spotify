@@ -32,4 +32,5 @@ describe("CardContainer tests", () => {
     expect(homeElement).toBeInTheDocument();
     expect(cvElement).toBeNull();
   });
+  it("should display the good component on menu click", () => {});
 });
